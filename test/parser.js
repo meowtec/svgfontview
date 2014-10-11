@@ -1,8 +1,8 @@
 var fs = require('fs')
 var path = require('path')
 var test = require('tap').test
-var parse = require('../parser')
-var model = require('../model')
+var parse = require('../lib/parser')
+var model = require('../lib/model')
 
 test('parse svg file to dom', function(t){
   var content = fs.readFileSync('./svg/fontello.svg').toString()

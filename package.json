@@ -8,7 +8,7 @@
   },
   "keywords": [
     "iconfont",
-    "svg",
+    "svg"
   ],
   "repository": {
     "type": "git",
@@ -23,7 +23,7 @@
     "xmldom": ">=0.1.19"
   },
   "devDependencies": {
-    "tap": "~0.4.0"
+    "tap": "~0.4.13"
   },
   "bin": {
     "svgfontview": "./bin/cmd.js"

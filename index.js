@@ -1,8 +1,8 @@
 var fs = require('fs')
 var path = require('path')
 var ejs = require('ejs')
-var parse = require('./parser')
-var model = require('./model')
+var parse = require('./lib/parser')
+var model = require('./lib/model')
 var colors = require('colors')
 
 module.exports = function(svgpath, htmlpath, callback){

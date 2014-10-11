@@ -6,8 +6,17 @@
   "scripts": {
     "test":  "tap test/*.js"
   },
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "iconfont",
+    "svg",
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:meowtec/svgfontview.git"
+  },
+  "homepage": "https://github.com/meowtec/svgfontview",
+  "author": "Meowtec <bertonzh@gmail.com>",
+  "license": "MIT",
   "dependencies": {
     "minimist": "1.1.0",
     "ejs": "1.0.0",

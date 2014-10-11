@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<style type="text/css">
+<% include index.css %>
+</style>
+<title>icon</title>
+</head>
+<body>
+<div class="svg-wrap" id="svg-wrap">
+  <%-svgXML%>
+</div>
+<div id="iconfont-wrap">
+  <div class="glyphs-count">Glyphs: <%=count%></div>
+  <ul class="iconfont-list">
+    <% icons.forEach(function(icon) { %>
+    <li>
+      <span class="iconfont" style="font-family: <%=font%>;"><%=icon.char%></span>
+      <span class="char"><%=icon.char%></span>
+      <input class="unicode" value="&amp;#<%=icon.unicode%>;">
+      <input class="unicode" value="<%=icon.cssContent%>">
+    </li>
+    <% }) %>
+  </ul>
+</div>
+</body>
+</html>

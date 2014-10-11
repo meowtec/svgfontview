@@ -1,0 +1,22 @@
+{
+  "name": "svgfontview",
+  "version": "0.0.0",
+  "description": "a tool to preview .svg font file.",
+  "main": "index.js",
+  "scripts": {
+    "test":  "tap test/*.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "minimist": "1.1.0",
+    "ejs": "1.0.0",
+    "xmldom": ">=0.1.19"
+  },
+  "devDependencies": {
+    "tap": "~0.4.0"
+  },
+  "bin": {
+    "svgfontview": "./bin/cmd.js"
+  }
+}

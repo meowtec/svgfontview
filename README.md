@@ -15,7 +15,7 @@ svgfontview myfontfile.svg myfontfile.svg.html
 
 #### Here is an example
 ```sh
-clone git@github.com:meowtec/svgfontview.git
+git clone git@github.com:meowtec/svgfontview.git
 cd svgfontview/test/svg/
 svgfontview fontello.svg
 open fontello.svg.html

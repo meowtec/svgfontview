@@ -3,17 +3,17 @@ svgfontview
 
 Preview svg font file.
 
-#### install
+#### Install
 ```sh
 npm install svgfontview -g
 ```
 
-#### use
+#### Usage
 ```
 svgfontview myfontfile.svg myfontfile.svg.html
 ```
 
-#### example
+#### Here is an example
 ```sh
 clone git@github.com:meowtec/svgfontview.git
 cd svgfontview/test/svg/

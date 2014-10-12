@@ -20,3 +20,4 @@ cd svgfontview/test/svg/
 svgfontview fontello.svg
 open fontello.svg.html
 
+![svgiconpreview](https://raw.githubusercontent.com/meowtec/svgfontview/master/preview.png)

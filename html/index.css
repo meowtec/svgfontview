@@ -3,6 +3,9 @@ body {
 }
 .iconfont-wrap{
   padding: 10px;
+  width: 1010px;
+  margin: 0 auto;
+  text-align: center;
 }
 .iconfont-list{
   padding: 0;
@@ -13,6 +16,8 @@ body {
   border-top: 1px solid #ccc;
   display: inline-block;
   font-family: 'Judson', serif;
+  max-width: 1000px;
+  text-align: left;
 
 }
 .iconfont-list li{
@@ -26,7 +31,8 @@ body {
   height: 100px;
   overflow: hidden;
 }
-.iconfont-list span, .iconfont-list input{
+
+.iconfont-list input, .iconfont-list div{
   font-size: 14px;
   display: block;
   padding: 0;
@@ -44,12 +50,12 @@ body {
   box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.2);
   background: rgb(255, 250, 248);
 }
-.iconfont-list span.iconfont{
+.iconfont-list .iconfont{
   font-family: iconfont;
   font-size: 32px;
   margin-bottom: 5px;
 }
-.iconfont-list span.char{
+.iconfont-list .char{
   display: none;
 }
 
@@ -59,4 +65,19 @@ body {
 .glyphs-count{
   font-size: 24px;
   padding: 20px 10px;
+}
+.glyphs-count .align-center{
+  text-align: center;
+}
+.iconfont-list.iconfont-diff li{
+  width: 150px;
+}
+.iconfont{
+  color: #4fc3f7;
+}
+.iconfont .diff-old{
+  color: #f48fb1;
+}
+.iconfont .diff-new{
+  color: #72d572;
 }

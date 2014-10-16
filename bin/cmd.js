@@ -1,22 +1,45 @@
 #!/usr/bin/env node
 var argv = require('minimist')(process.argv.slice(2))
 var colors = require('colors')
-var convert = require('..')
-var svgpath = argv._[0]
-var htmlpath = argv._[1]
+var svgfontview = require('..')
+var argv0 = argv._[0],
+  argv1 = argv._[1],
+  argv2 = argv._[2],
+  argv3 = argv._[3]
 
-if(!svgpath){
+if(!argv0){
   console.log('usage: svgfontview svg_file_name [ html_file_name ]')
   return
 }
-if(!htmlpath){
-  htmlpath = svgpath + '.html'
-}
-if(/\/$/.test(htmlpath)){
-  htmlpath = htmlpath + svgpath + '.html'
-}
-convert(svgpath, htmlpath, function (success){
-  if(success){
-    console.log('HTML doc '.green + htmlpath.yellow + ' has been created.'.green);
+if(argv0 === 'diff'){
+  // diff
+  // argv1 svg1
+  // argv2 svg2
+  // argv3 html
+  var svg2Name = argv2.split('/').pop()
+  var htmlpath = argv3
+  if(!htmlpath){
+    htmlpath = argv1 + '_' + svg2Name + '_diff.html'
   }
-})
+  console.log(htmlpath)
+  svgfontview.diff(argv1, argv2, htmlpath, function (success){
+    if(success){
+      console.log('HTML doc '.green + htmlpath.yellow + ' has been created.'.green);
+    }
+  })
+}else{
+  // convert
+  var svgpath = argv0,
+    htmlpath = argv1
+  if(!argv1){
+    htmlpath = svgpath + '.html'
+  }
+  if(/\/$/.test(htmlpath)){
+    htmlpath = htmlpath + svgpath + '.html'
+  }
+  svgfontview.view(svgpath, htmlpath, function (success){
+    if(success){
+      console.log('HTML doc '.green + htmlpath.yellow + ' has been created.'.green);
+    }
+  })
+}

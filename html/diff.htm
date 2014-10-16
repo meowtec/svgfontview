@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<style type="text/css">
+<% include index.css %>
+</style>
+<title>icon</title>
+</head>
+<body>
+<div class="svg-wrap" id="svg-wrap">
+  <%-newSvgXML%>
+  <%-oldSvgXML%>
+</div>
+<div id="iconfont-wrap" class="iconfont-wrap">
+  <div class="glyphs-count">Unchange: <%=data.unchange.length%></div>
+  <ul class="iconfont-list">
+    <% data.unchange.forEach(function(icon) { %>
+    <li>
+      <div class="iconfont" style="font-family: <%=data.newData.font%>;"><%=icon.char%></div>
+      <div class="char"><%=icon.char%></div>
+      <input class="unicode" value="&amp;#<%=icon.unicode%>;">
+      <input class="unicode" value="<%=icon.cssContent%>">
+    </li>
+    <% }) %>
+  </ul>
+  <div class="glyphs-count">change: <%=data.change.length%></div>
+  <ul class="iconfont-list iconfont-diff">
+    <% data.change.forEach(function(icon) { %>
+    <li>
+      <div class="iconfont">
+        <span style="font-family: <%=data.oldData.font%>;" class="diff-old"><%=icon.char%></span>
+        <span style="font-family: <%=data.newData.font%>;" class="diff-new"><%=icon.char%></span>
+      </div>
+      <span class="char"><%=icon.char%></span>
+      <input class="unicode" value="&amp;#<%=icon.unicode%>;">
+      <input class="unicode" value="<%=icon.cssContent%>">
+    </li>
+    <% }) %>
+  </ul>
+  <div class="glyphs-count">remove: <%=data.remove.length%></div>
+  <ul class="iconfont-list">
+    <% data.remove.forEach(function(icon) { %>
+    <li>
+      <div class="iconfont">
+        <span style="font-family: <%=data.oldData.font%>;" class="diff-old"><%=icon.char%></span>
+      </div>
+      <span class="char"><%=icon.char%></span>
+      <input class="unicode" value="&amp;#<%=icon.unicode%>;">
+      <input class="unicode" value="<%=icon.cssContent%>">
+    </li>
+    <% }) %>
+  </ul>
+  <div class="glyphs-count">new: <%=data.newAdd.length%></div>
+  <ul class="iconfont-list">
+    <% data.newAdd.forEach(function(icon) { %>
+    <li>
+      <div class="iconfont">
+        <span style="font-family: <%=data.newData.font%>;" class="diff-new"><%=icon.char%></span>
+      </div>
+      <span class="char"><%=icon.char%></span>
+      <input class="unicode" value="&amp;#<%=icon.unicode%>;">
+      <input class="unicode" value="<%=icon.cssContent%>">
+    </li>
+    <% }) %>
+  </ul>
+</div>
+</body>
+</html>

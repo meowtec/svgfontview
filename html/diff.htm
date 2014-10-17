@@ -13,7 +13,7 @@
   <%-oldSvgXML%>
 </div>
 <div id="iconfont-wrap" class="iconfont-wrap">
-  <div class="glyphs-count">Unchange: <%=data.unchange.length%></div>
+  <div class="glyphs-count">Unchanged: <%=data.unchange.length%></div>
   <ul class="iconfont-list">
     <% data.unchange.forEach(function(icon) { %>
     <li>
@@ -24,7 +24,7 @@
     </li>
     <% }) %>
   </ul>
-  <div class="glyphs-count">change: <%=data.change.length%></div>
+  <div class="glyphs-count">Changed: <%=data.change.length%></div>
   <ul class="iconfont-list iconfont-diff">
     <% data.change.forEach(function(icon) { %>
     <li>
@@ -38,7 +38,7 @@
     </li>
     <% }) %>
   </ul>
-  <div class="glyphs-count">remove: <%=data.remove.length%></div>
+  <div class="glyphs-count">Removed: <%=data.remove.length%></div>
   <ul class="iconfont-list">
     <% data.remove.forEach(function(icon) { %>
     <li>
@@ -51,7 +51,7 @@
     </li>
     <% }) %>
   </ul>
-  <div class="glyphs-count">new: <%=data.newAdd.length%></div>
+  <div class="glyphs-count">New: <%=data.newAdd.length%></div>
   <ul class="iconfont-list">
     <% data.newAdd.forEach(function(icon) { %>
     <li>

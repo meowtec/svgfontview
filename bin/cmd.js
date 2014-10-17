@@ -21,10 +21,11 @@ if(argv0 === 'diff'){
   if(!htmlpath){
     htmlpath = argv1 + '_' + svg2Name + '_diff.html'
   }
-  console.log(htmlpath)
   svgfontview.diff(argv1, argv2, htmlpath, function (success){
     if(success){
-      console.log('HTML doc '.green + htmlpath.yellow + ' has been created.'.green);
+      console.log('HTML file '.green + htmlpath.yellow + ' has been created.'.green);
+    }else{
+      console.log('shit.'.red)
     }
   })
 }else{
@@ -39,7 +40,9 @@ if(argv0 === 'diff'){
   }
   svgfontview.view(svgpath, htmlpath, function (success){
     if(success){
-      console.log('HTML doc '.green + htmlpath.yellow + ' has been created.'.green);
+      console.log('diff file '.green + htmlpath.yellow + ' has been created.'.green);
+    }else{
+      console.log('shit.'.red)
     }
   })
 }

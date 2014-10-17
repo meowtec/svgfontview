@@ -14,8 +14,8 @@ var getModelByPath = function(path){
 
 exports.view = function(svgpath, htmlpath, callback){
   var data = getModelByPath(svgpath)
-  if(!data){
-    console.error('svg file has some wrong.'.red)
+  if(!data.success){
+    console.error('some error.'.red)
     return
   }
   ejs.renderFile(path.resolve(__dirname, './html/index.htm'), {
@@ -31,11 +31,13 @@ exports.view = function(svgpath, htmlpath, callback){
   })
 }
 exports.diff = function(svgpath1, svgpath2, htmlpath, callback){
-  var diffResult = diff(getModelByPath(svgpath1), getModelByPath(svgpath2))
-  if(!diffResult){
-    console.error('svg file has some wrong.'.red)
+  var data1 = getModelByPath(svgpath1),
+    data2 = getModelByPath(svgpath2);
+  if(!data1.success || !data2.success){
+    console.error('some error.'.red)
     return
   }
+  var diffResult = diff(data1, data2)
   ejs.renderFile(path.resolve(__dirname, './html/diff.htm'), {
     data: diffResult,
     newSvgXML: diffResult.newData.dom.getElementsByTagName('svg')[0].toString(),

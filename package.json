@@ -1,6 +1,6 @@
 {
   "name": "svgfontview",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "a tool to preview and diff .svg font file.",
   "main": "index.js",
   "scripts": {
